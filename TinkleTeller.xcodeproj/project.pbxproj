@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		994948ED18B86782006A9FBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994948EC18B86782006A9FBF /* Foundation.framework */; };
+		994948EF18B86782006A9FBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994948EE18B86782006A9FBF /* CoreGraphics.framework */; };
+		994948F118B86782006A9FBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994948F018B86782006A9FBF /* UIKit.framework */; };
+		994948F718B86782006A9FBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 994948F518B86782006A9FBF /* InfoPlist.strings */; };
+		994948F918B86782006A9FBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 994948F818B86782006A9FBF /* main.m */; };
+		994948FD18B86782006A9FBF /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 994948FC18B86782006A9FBF /* TTAppDelegate.m */; };
+		9949490018B86782006A9FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994948FE18B86782006A9FBF /* Main.storyboard */; };
+		9949490318B86783006A9FBF /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949490218B86783006A9FBF /* TTViewController.m */; };
+		9949490518B86783006A9FBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9949490418B86783006A9FBF /* Images.xcassets */; };
+		9949490C18B86783006A9FBF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9949490B18B86783006A9FBF /* XCTest.framework */; };
+		9949490D18B86783006A9FBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994948EC18B86782006A9FBF /* Foundation.framework */; };
+		9949490E18B86783006A9FBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994948F018B86782006A9FBF /* UIKit.framework */; };
+		9949491618B86783006A9FBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9949491418B86783006A9FBF /* InfoPlist.strings */; };
+		9949491818B86783006A9FBF /* TinkleTellerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949491718B86783006A9FBF /* TinkleTellerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9949490F18B86783006A9FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 994948E118B86782006A9FBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 994948E818B86782006A9FBF;
+			remoteInfo = TinkleTeller;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		994948E918B86782006A9FBF /* TinkleTeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkleTeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		994948EC18B86782006A9FBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		994948EE18B86782006A9FBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		994948F018B86782006A9FBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		994948F418B86782006A9FBF /* TinkleTeller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TinkleTeller-Info.plist"; sourceTree = "<group>"; };
+		994948F618B86782006A9FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		994948F818B86782006A9FBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		994948FA18B86782006A9FBF /* TinkleTeller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinkleTeller-Prefix.pch"; sourceTree = "<group>"; };
+		994948FB18B86782006A9FBF /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
+		994948FC18B86782006A9FBF /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
+		994948FF18B86782006A9FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9949490118B86782006A9FBF /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
+		9949490218B86783006A9FBF /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
+		9949490418B86783006A9FBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9949490A18B86783006A9FBF /* TinkleTellerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkleTellerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9949490B18B86783006A9FBF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9949491318B86783006A9FBF /* TinkleTellerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TinkleTellerTests-Info.plist"; sourceTree = "<group>"; };
+		9949491518B86783006A9FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9949491718B86783006A9FBF /* TinkleTellerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinkleTellerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		994948E618B86782006A9FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994948EF18B86782006A9FBF /* CoreGraphics.framework in Frameworks */,
+				994948F118B86782006A9FBF /* UIKit.framework in Frameworks */,
+				994948ED18B86782006A9FBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9949490718B86783006A9FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9949490C18B86783006A9FBF /* XCTest.framework in Frameworks */,
+				9949490E18B86783006A9FBF /* UIKit.framework in Frameworks */,
+				9949490D18B86783006A9FBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		994948E018B86782006A9FBF = {
+			isa = PBXGroup;
+			children = (
+				994948F218B86782006A9FBF /* TinkleTeller */,
+				9949491118B86783006A9FBF /* TinkleTellerTests */,
+				994948EB18B86782006A9FBF /* Frameworks */,
+				994948EA18B86782006A9FBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		994948EA18B86782006A9FBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				994948E918B86782006A9FBF /* TinkleTeller.app */,
+				9949490A18B86783006A9FBF /* TinkleTellerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		994948EB18B86782006A9FBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				994948EC18B86782006A9FBF /* Foundation.framework */,
+				994948EE18B86782006A9FBF /* CoreGraphics.framework */,
+				994948F018B86782006A9FBF /* UIKit.framework */,
+				9949490B18B86783006A9FBF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		994948F218B86782006A9FBF /* TinkleTeller */ = {
+			isa = PBXGroup;
+			children = (
+				994948FB18B86782006A9FBF /* TTAppDelegate.h */,
+				994948FC18B86782006A9FBF /* TTAppDelegate.m */,
+				994948FE18B86782006A9FBF /* Main.storyboard */,
+				9949490118B86782006A9FBF /* TTViewController.h */,
+				9949490218B86783006A9FBF /* TTViewController.m */,
+				9949490418B86783006A9FBF /* Images.xcassets */,
+				994948F318B86782006A9FBF /* Supporting Files */,
+			);
+			path = TinkleTeller;
+			sourceTree = "<group>";
+		};
+		994948F318B86782006A9FBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				994948F418B86782006A9FBF /* TinkleTeller-Info.plist */,
+				994948F518B86782006A9FBF /* InfoPlist.strings */,
+				994948F818B86782006A9FBF /* main.m */,
+				994948FA18B86782006A9FBF /* TinkleTeller-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9949491118B86783006A9FBF /* TinkleTellerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9949491718B86783006A9FBF /* TinkleTellerTests.m */,
+				9949491218B86783006A9FBF /* Supporting Files */,
+			);
+			path = TinkleTellerTests;
+			sourceTree = "<group>";
+		};
+		9949491218B86783006A9FBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9949491318B86783006A9FBF /* TinkleTellerTests-Info.plist */,
+				9949491418B86783006A9FBF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		994948E818B86782006A9FBF /* TinkleTeller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9949491B18B86783006A9FBF /* Build configuration list for PBXNativeTarget "TinkleTeller" */;
+			buildPhases = (
+				994948E518B86782006A9FBF /* Sources */,
+				994948E618B86782006A9FBF /* Frameworks */,
+				994948E718B86782006A9FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinkleTeller;
+			productName = TinkleTeller;
+			productReference = 994948E918B86782006A9FBF /* TinkleTeller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9949490918B86783006A9FBF /* TinkleTellerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9949491E18B86783006A9FBF /* Build configuration list for PBXNativeTarget "TinkleTellerTests" */;
+			buildPhases = (
+				9949490618B86783006A9FBF /* Sources */,
+				9949490718B86783006A9FBF /* Frameworks */,
+				9949490818B86783006A9FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9949491018B86783006A9FBF /* PBXTargetDependency */,
+			);
+			name = TinkleTellerTests;
+			productName = TinkleTellerTests;
+			productReference = 9949490A18B86783006A9FBF /* TinkleTellerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		994948E118B86782006A9FBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TT;
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					9949490918B86783006A9FBF = {
+						TestTargetID = 994948E818B86782006A9FBF;
+					};
+				};
+			};
+			buildConfigurationList = 994948E418B86782006A9FBF /* Build configuration list for PBXProject "TinkleTeller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 994948E018B86782006A9FBF;
+			productRefGroup = 994948EA18B86782006A9FBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				994948E818B86782006A9FBF /* TinkleTeller */,
+				9949490918B86783006A9FBF /* TinkleTellerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		994948E718B86782006A9FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9949490518B86783006A9FBF /* Images.xcassets in Resources */,
+				994948F718B86782006A9FBF /* InfoPlist.strings in Resources */,
+				9949490018B86782006A9FBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9949490818B86783006A9FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9949491618B86783006A9FBF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		994948E518B86782006A9FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994948FD18B86782006A9FBF /* TTAppDelegate.m in Sources */,
+				994948F918B86782006A9FBF /* main.m in Sources */,
+				9949490318B86783006A9FBF /* TTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9949490618B86783006A9FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9949491818B86783006A9FBF /* TinkleTellerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9949491018B86783006A9FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 994948E818B86782006A9FBF /* TinkleTeller */;
+			targetProxy = 9949490F18B86783006A9FBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		994948F518B86782006A9FBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				994948F618B86782006A9FBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		994948FE18B86782006A9FBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				994948FF18B86782006A9FBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9949491418B86783006A9FBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9949491518B86783006A9FBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9949491918B86783006A9FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9949491A18B86783006A9FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9949491C18B86783006A9FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinkleTeller/TinkleTeller-Prefix.pch";
+				INFOPLIST_FILE = "TinkleTeller/TinkleTeller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9949491D18B86783006A9FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinkleTeller/TinkleTeller-Prefix.pch";
+				INFOPLIST_FILE = "TinkleTeller/TinkleTeller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9949491F18B86783006A9FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TinkleTeller.app/TinkleTeller";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinkleTeller/TinkleTeller-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TinkleTellerTests/TinkleTellerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9949492018B86783006A9FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TinkleTeller.app/TinkleTeller";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinkleTeller/TinkleTeller-Prefix.pch";
+				INFOPLIST_FILE = "TinkleTellerTests/TinkleTellerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		994948E418B86782006A9FBF /* Build configuration list for PBXProject "TinkleTeller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9949491918B86783006A9FBF /* Debug */,
+				9949491A18B86783006A9FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9949491B18B86783006A9FBF /* Build configuration list for PBXNativeTarget "TinkleTeller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9949491C18B86783006A9FBF /* Debug */,
+				9949491D18B86783006A9FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9949491E18B86783006A9FBF /* Build configuration list for PBXNativeTarget "TinkleTellerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9949491F18B86783006A9FBF /* Debug */,
+				9949492018B86783006A9FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 994948E118B86782006A9FBF /* Project object */;
+}
