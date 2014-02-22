@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface TTViewController : UIViewController
+@interface TTViewController : UIViewController <CBPeripheralDelegate>
+
+@property (strong, nonatomic) CBPeripheral * connectedPeripheral;
 
 @end
