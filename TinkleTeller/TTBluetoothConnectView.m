@@ -8,35 +8,30 @@
 
 #import "TTBluetoothConnectView.h"
 #import "TTViewController.h"
+#import "TTBluetoothSingleton.h"
 
 @interface TTBluetoothConnectView ()
 
-
-@property (strong, nonatomic) NSMutableArray * discoveredDevices;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) TTBluetoothSingleton * ttBluetooth;
+
+@property (strong, nonatomic) NSArray *deviceList;
 
 @end
 
 @implementation TTBluetoothConnectView
 
-- (CBCentralManager *) centralManager
-{
-    if(_centralManager== nil)
-    {
-#warning TODO run this on a different queue
-        _centralManager=[[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    }
-    return _centralManager;
-}
 
-- (NSMutableArray *) discoveredDevices
+-(TTBluetoothSingleton *) ttBluetooth
 {
-    if(_discoveredDevices == nil)
+    if(_ttBluetooth == nil)
     {
-       _discoveredDevices=[[NSMutableArray alloc] init];
+        _ttBluetooth=[TTBluetoothSingleton getInstance];
+        [_ttBluetooth setDeviceListDelegate:self];
     }
-    return _discoveredDevices;
+    
+    return _ttBluetooth;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -63,10 +58,8 @@
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
     
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
-    
-    [self.centralManager scanForPeripheralsWithServices:nil options:options];
-    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], CBCentralManagerScanOptionAllowDuplicatesKey, NO, nil];
+    [self.ttBluetooth.centralManager scanForPeripheralsWithServices:nil options:options];
     
 }
 
@@ -80,66 +73,18 @@
     return YES;
 }
 
-#pragma mark - CBCentralManagerDelegate
-
-// method called whenever you have successfully connected to the BLE peripheral
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
-{
-    UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"Connected to Peripheral" message:[NSString stringWithFormat:@"Connected to Device %@",peripheral.name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    [alert show];
-    
-    TTViewController * ttview=(TTViewController *)self.parentViewController;
-
-    ttview.connectedPeripheral=peripheral;
-    
-    [peripheral setDelegate: ttview];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-// CBCentralManagerDelegate - This is called with the CBPeripheral class as its main input parameter. This contains most of the information there is to know about a BLE peripheral.
-- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
-{
-    
-    NSLog(@"Peripheral Discovered Name:%@ ID: %@", peripheral.name, peripheral.identifier);
-    
-    [self.discoveredDevices addObject:peripheral];
-    [self.tableView reloadData];
-}
-
-// method called whenever the device state changes.
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
-    // Determine the state of the peripheral
-    if ([central state] == CBCentralManagerStatePoweredOff) {
-        NSLog(@"CoreBluetooth BLE hardware is powered off");
-    }
-    else if ([central state] == CBCentralManagerStatePoweredOn) {
-        NSLog(@"CoreBluetooth BLE hardware is powered on and ready");
-    }
-    else if ([central state] == CBCentralManagerStateUnauthorized) {
-        NSLog(@"CoreBluetooth BLE state is unauthorized");
-    }
-    else if ([central state] == CBCentralManagerStateUnknown) {
-        NSLog(@"CoreBluetooth BLE state is unknown");
-    }
-    else if ([central state] == CBCentralManagerStateUnsupported) {
-        NSLog(@"CoreBluetooth BLE hardware is unsupported on this platform");
-    }
-}
 
 
 #pragma mark - UITableView Stuff
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.discoveredDevices count];
+    return [self.deviceList count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CBPeripheral *device=(CBPeripheral *)self.discoveredDevices[indexPath.row];
+    CBPeripheral *device=(CBPeripheral *)self.deviceList[indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
     
@@ -152,11 +97,24 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CBPeripheral *device=(CBPeripheral *)self.discoveredDevices[indexPath.row];
-
-    [self.centralManager connectPeripheral:device options:nil];
+    CBPeripheral *device=(CBPeripheral *)self.ttBluetooth.discoveredDevices[indexPath.row];
+    
+    [self.ttBluetooth connectToPeripheral:device];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
-#pragma mark - UITableViewDelegate
+
+-(void) deviceListUpdated:(NSArray *)deviceList
+{
+    NSLog(@"Device List Updated!");
+    
+    self.deviceList=deviceList;
+    
+    [self.tableView reloadData];
+    
+}
+
+
 
 @end

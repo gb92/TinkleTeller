@@ -22,6 +22,7 @@
 		9949491618B86783006A9FBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9949491418B86783006A9FBF /* InfoPlist.strings */; };
 		9949491818B86783006A9FBF /* TinkleTellerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949491718B86783006A9FBF /* TinkleTellerTests.m */; };
 		9949492318B90A88006A9FBF /* TTBluetoothConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949492218B90A88006A9FBF /* TTBluetoothConnectView.m */; };
+		9949492918B937A5006A9FBF /* TTBluetoothSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949492818B937A5006A9FBF /* TTBluetoothSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		9949491718B86783006A9FBF /* TinkleTellerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinkleTellerTests.m; sourceTree = "<group>"; };
 		9949492118B90A88006A9FBF /* TTBluetoothConnectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBluetoothConnectView.h; sourceTree = "<group>"; };
 		9949492218B90A88006A9FBF /* TTBluetoothConnectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBluetoothConnectView.m; sourceTree = "<group>"; };
+		9949492718B937A5006A9FBF /* TTBluetoothSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBluetoothSingleton.h; sourceTree = "<group>"; };
+		9949492818B937A5006A9FBF /* TTBluetoothSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBluetoothSingleton.m; sourceTree = "<group>"; };
+		9949492A18B940CA006A9FBF /* TTBluetoothDeviceListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBluetoothDeviceListDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,9 @@
 				9949492218B90A88006A9FBF /* TTBluetoothConnectView.m */,
 				9949490118B86782006A9FBF /* TTViewController.h */,
 				9949490218B86783006A9FBF /* TTViewController.m */,
+				9949492718B937A5006A9FBF /* TTBluetoothSingleton.h */,
+				9949492818B937A5006A9FBF /* TTBluetoothSingleton.m */,
+				9949492A18B940CA006A9FBF /* TTBluetoothDeviceListDelegate.h */,
 			);
 			path = TinkleTeller;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9949492918B937A5006A9FBF /* TTBluetoothSingleton.m in Sources */,
 				994948FD18B86782006A9FBF /* TTAppDelegate.m in Sources */,
 				994948F918B86782006A9FBF /* main.m in Sources */,
 				9949492318B90A88006A9FBF /* TTBluetoothConnectView.m in Sources */,

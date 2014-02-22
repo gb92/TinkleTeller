@@ -18,6 +18,14 @@
 @implementation TTViewController
 
 
+-(TTBluetoothSingleton *) ttBluetooth
+{
+    if(_ttBluetooth == nil)
+    {
+        _ttBluetooth=[TTBluetoothSingleton getInstance];
+    }
+    return _ttBluetooth;
+}
 
 
 - (void)viewDidLoad
@@ -32,12 +40,14 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     
-    if(self.connectedPeripheral == nil)
+    if(self.ttBluetooth.connectedPeripheral == nil)
     {
         self.currentStatusLabel.text = @"Tinkler Not Connected";
     }
     else
     {
+        [self.ttBluetooth.connectedPeripheral setDelegate:self];
+        [self.ttBluetooth.connectedPeripheral discoverServices:nil];
         self.currentStatusLabel.text = @"Clean";
     }
 }
@@ -70,6 +80,9 @@
 // Invoked when you retrieve a specified characteristic's value, or when the peripheral device notifies your app that the characteristic's value has changed.
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
+    
+    NSLog(@"Updated Value for Characteristic: %@ with Description: %@", characteristic.UUID, characteristic.description);
+    
 }
 
 

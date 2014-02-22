@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "TTBluetoothDeviceListDelegate.h"
 
-@interface TTBluetoothConnectView : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDataSource, UITableViewDelegate>
-
-@property (strong, nonatomic) CBCentralManager* centralManager;
+@interface TTBluetoothConnectView : UIViewController <UITableViewDataSource, UITableViewDelegate, TTBluetoothDeviceListDelegate>
 
 
 @end

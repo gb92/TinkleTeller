@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "TTBluetoothSingleton.h"
 
 @interface TTViewController : UIViewController <CBPeripheralDelegate>
 
-@property (strong, nonatomic) CBPeripheral * connectedPeripheral;
+@property (strong, nonatomic) TTBluetoothSingleton* ttBluetooth;
 
 @end
