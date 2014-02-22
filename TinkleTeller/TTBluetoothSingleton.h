@@ -19,9 +19,14 @@
 @property (strong, nonatomic) NSMutableArray *discoveredDevices;
 
 @property (weak, nonatomic) id deviceListDelegate;
+
+@property (weak, nonatomic) id connectedDeviceDelegate;
+
 +(TTBluetoothSingleton *) getInstance;
 
 -(void) connectToPeripheral:(CBPeripheral *)peripheral;
+
+-(void) scanForDevices;
 
 
 

@@ -65,6 +65,9 @@ static TTBluetoothSingleton *singletonInstance;
     
     [alert show];
     
+    self.connectedPeripheral=peripheral;
+    self.connectedPeripheral.delegate=self.connectedDeviceDelegate;
+    
 }
 
 // CBCentralManagerDelegate - This is called with the CBPeripheral class as its main input parameter. This contains most of the information there is to know about a BLE peripheral.
@@ -108,6 +111,15 @@ static TTBluetoothSingleton *singletonInstance;
     [self.centralManager connectPeripheral:peripheral options:nil];
     
     self.connectedPeripheral=peripheral;
+}
+
+-(void) scanForDevices
+{
+    self.discoveredDevices=[[NSMutableArray alloc] init];
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], CBCentralManagerScanOptionAllowDuplicatesKey, NO, nil];
+    //@[[CBUUID UUIDWithString:@"ffe1"]]
+    [self.centralManager scanForPeripheralsWithServices:nil options:options];
 }
 
 @end

@@ -58,8 +58,7 @@
     self.tableView.dataSource=self;
     self.tableView.delegate=self;
     
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], CBCentralManagerScanOptionAllowDuplicatesKey, NO, nil];
-    [self.ttBluetooth.centralManager scanForPeripheralsWithServices:nil options:options];
+    [self.ttBluetooth scanForDevices];
     
 }
 
@@ -100,6 +99,7 @@
     CBPeripheral *device=(CBPeripheral *)self.ttBluetooth.discoveredDevices[indexPath.row];
     
     [self.ttBluetooth connectToPeripheral:device];
+    [self.ttBluetooth.centralManager stopScan];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
